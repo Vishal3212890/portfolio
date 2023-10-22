@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Button from './common/button.js';
 import Separator from './common/separator.js';
 import AboutCard from './common/about-card.js';
-import { MdOutlineDesignServices } from 'react-icons/md';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaRocket } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
 import SectionHeading from './common/section-heading.js';
 
@@ -11,7 +10,10 @@ export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="flex justify-center items-center flex-col gap-20">
+    <section
+      className="flex justify-center items-center flex-col gap-20"
+      id="about"
+    >
       <SectionHeading label="About me" />
       <div className="flex justify-center items-center flex-col gap-6 text-justify w-2/4">
         <p>
@@ -61,22 +63,19 @@ export default function About() {
       <Separator />
       <div className="flex items-center justify-center flex-wrap gap-16 w-2/3">
         <AboutCard
-          Logo={MdOutlineDesignServices}
-          name="Design"
-          description="I can design the site based on your needs and suggestions. I can also
-        design the site from scratch and consult you during the job."
-        />
-        <AboutCard
           Logo={FaCode}
           name="Development"
-          description="I can design the site based on your needs and suggestions. I can also
-        design the site from scratch and consult you during the job."
+          description="Proficient in web development, experienced with front-end and back-end technologies, and skilled in designing websites from scratch or based on client needs, I offer comprehensive development services for your digital projects."
+        />
+        <AboutCard
+          Logo={FaRocket}
+          name="Deployment"
+          description="With expertise in deploying web applications to various hosting platforms and setting up efficient CI/CD pipelines, I ensure a smooth transition from development to production while emphasizing scalability and security."
         />
         <AboutCard
           Logo={AiFillSetting}
           name="Maintenance"
-          description="I can design the site based on your needs and suggestions. I can also
-        design the site from scratch and consult you during the job."
+          description="I provide ongoing website maintenance services, including security updates, performance optimization, and effective communication with clients to keep their digital assets running smoothly."
         />
       </div>
       <Separator />

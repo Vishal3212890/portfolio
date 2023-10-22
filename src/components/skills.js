@@ -4,7 +4,10 @@ import Skill from './common/skill.js';
 
 export default function Skills() {
   return (
-    <section className="flex items-center justify-center flex-col mt-16 gap-20">
+    <section
+      id="skills"
+      className="flex items-center justify-center flex-col mt-16 gap-20"
+    >
       <SectionHeading label="Skills" />
       <div className="flex flex-wrap items-center justify-center w-2/4 gap-20">
         <Skill src="/images/html5.svg" title="HTML5" />

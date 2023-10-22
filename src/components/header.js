@@ -2,7 +2,7 @@ import Link from 'next/link.js';
 
 export default function Header() {
   return (
-    <header className="bg-black text-white px-10 py-3 flex justify-end items-center gap-12">
+    <header className="bg-black text-white px-10 py-3 flex justify-end items-center gap-12 sticky top-0 z-10">
       <Link href="#about" className="font-bold">
         About me
       </Link>

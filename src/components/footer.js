@@ -7,9 +7,16 @@ import {
 } from 'react-icons/ai';
 
 export default function Footer() {
+  const handleBackToTopClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-black text-white flex items-center justify-center flex-col py-10 gap-10">
-      <button className="uppercase flex items-center justify-center flex-col gap-2 text-lg tracking-widest font-bold">
+      <button
+        className="uppercase flex items-center justify-center flex-col gap-2 text-lg tracking-widest font-bold"
+        onClick={handleBackToTopClick}
+      >
         <MdDoubleArrow color="white" size={25} className="-rotate-90" />
         Back to top
       </button>

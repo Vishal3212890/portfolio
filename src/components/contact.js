@@ -5,7 +5,10 @@ import TextField from './common/text-field.js';
 
 export default function Contact() {
   return (
-    <section className="flex justify-center items-center flex-col gap-16 py-16">
+    <section
+      id="contact"
+      className="flex justify-center items-center flex-col gap-16 py-16"
+    >
       <SectionHeading label="Contact" />
       <form className="flex justify-center items-center flex-col gap-10 w-1/3">
         <TextField name="name" placeholder="Enter your name*" />
