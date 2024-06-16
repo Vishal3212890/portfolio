@@ -1,7 +1,7 @@
-import Button from './common/button.js';
-import SectionHeading from './common/section-heading.js';
-import TextArea from './common/text-area.js';
-import TextField from './common/text-field.js';
+import Button from "./common/button.js";
+import SectionHeading from "./common/section-heading.js";
+import TextArea from "./common/text-area.js";
+import TextField from "./common/text-field.js";
 
 export default function Contact() {
   return (
@@ -15,7 +15,7 @@ export default function Contact() {
         <TextField name="email" placeholder="Enter your email*" />
         <TextField name="phone" placeholder="Phone number" />
         <TextArea name="message" placeholder="Your message*" />
-        <Button label="Submit" />
+        <Button>Submit</Button>
       </form>
     </section>
   );

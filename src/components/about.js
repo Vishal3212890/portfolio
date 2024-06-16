@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Button from './common/button.js';
-import Separator from './common/separator.js';
-import AboutCard from './common/about-card.js';
-import { FaCode, FaRocket } from 'react-icons/fa';
-import { AiFillSetting } from 'react-icons/ai';
-import SectionHeading from './common/section-heading.js';
+import { useState } from "react";
+import Button from "./common/button.js";
+import Separator from "./common/separator.js";
+import AboutCard from "./common/about-card.js";
+import { FaCode, FaRocket } from "react-icons/fa";
+import { AiFillSetting } from "react-icons/ai";
+import SectionHeading from "./common/section-heading.js";
 
 export default function About() {
   const [showMore, setShowMore] = useState(false);
@@ -55,13 +55,12 @@ export default function About() {
             </p>
           </>
         )}
-        <Button
-          label={showMore ? 'Less' : 'More'}
-          onClick={() => setShowMore(!showMore)}
-        />
+        <Button onClick={() => setShowMore(!showMore)}>
+          {showMore ? "Less" : "More"}
+        </Button>
       </div>
       <Separator />
-      <div className="flex items-center justify-center flex-wrap gap-16 w-2/3">
+      <div className="flex items-center justify-center flex-wrap gap-16 max-w-7xl">
         <AboutCard
           Logo={FaCode}
           name="Development"

@@ -13,10 +13,10 @@ export default function Skills() {
         <Skill src="/images/html5.svg" title="HTML5" />
         <Skill src="/images/css3.svg" title="CSS3" />
         <Skill src="/images/js.svg" title="Javascript" />
-        <Skill src="/images/nodejs.svg" title="NodeJS" />
+        <Skill src="/images/nodejs.png" title="NodeJS" />
         <Skill src="/images/react.svg" title="React" />
-        <Skill src="/images/mongodb.svg" title="MongoDB" />
-        <Skill src="/images/mysql.svg" title="MySQL" />
+        <Skill src="/images/mongodb.png" title="MongoDB" />
+        <Skill src="/images/mysql.png" title="MySQL" />
         <Skill src="/images/git.svg" title="Git" />
         <Skill src="/images/docker.svg" title="Docker" />
         <Skill src="/images/ethereum.svg" title="Ethereum" />

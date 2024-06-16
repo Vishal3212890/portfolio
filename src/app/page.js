@@ -1,14 +1,18 @@
-'use client';
-import Footer from '@/components/footer.js';
-import Header from '@/components/header.js';
-import Main from '@/components/main.js';
+"use client";
+import About from "@/components/about";
+import Contact from "@/components/contact";
+import Hero from "@/components/hero";
+import Portfolio from "@/components/portfolio";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <main className="bg-neutral-200">
+      <Hero />
+      <About />
+      <Skills />
+      <Portfolio />
+      <Contact />
+    </main>
   );
 }
