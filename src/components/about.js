@@ -5,17 +5,18 @@ import AboutCard from "./common/about-card.js";
 import { FaCode, FaRocket } from "react-icons/fa";
 import { AiFillSetting } from "react-icons/ai";
 import SectionHeading from "./common/section-heading.js";
+import classNames from "classnames";
 
 export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   return (
     <section
-      className="flex justify-center items-center flex-col gap-20"
+      className="flex justify-center items-center flex-col pt-28 gap-16"
       id="about"
     >
       <SectionHeading label="About me" />
-      <div className="flex justify-center items-center flex-col gap-6 text-justify w-2/4">
+      <div className="flex justify-center items-center flex-col gap-6 text-justify max-w-4xl mx-5">
         <p>
           My name is Vishal Prajapati, a driven software engineer with a strong
           passion for crafting exceptional digital experiences. With several
@@ -35,32 +36,34 @@ export default function About() {
           management. This academic foundation enriches my practical work,
           allowing me to apply cutting-edge knowledge to real-world problems.
         </p>
-        {showMore && (
-          <>
-            <p>
-              In addition to my core software engineering skills, I have a deep
-              interest in blockchain technology. I&apos;ve had the privilege of
-              working on projects that explore the decentralized and
-              transformative potential of blockchain, including distributed
-              ledgers and smart contracts.
-            </p>
-            <p>
-              As I move forward, I&apos;m thrilled about the endless
-              opportunities in the tech world. My goal is to continue
-              contributing to innovative projects, bridging the gap between
-              academia and industry, and making a meaningful impact through
-              technology. Beyond the code, I enjoy [mention your hobbies or
-              interests], which help me maintain a well-rounded and balanced
-              approach to life.
-            </p>
-          </>
-        )}
+        <div
+          className={classNames(
+            "max-h-0 overflow-hidden transition-[max-height] duration-300",
+            showMore && "max-h-96"
+          )}
+        >
+          <p>
+            In addition to my core software engineering skills, I have a deep
+            interest in blockchain technology. I&apos;ve had the privilege of
+            working on projects that explore the decentralized and
+            transformative potential of blockchain, including distributed
+            ledgers and smart contracts.
+          </p>
+          <p className="mt-6">
+            As I move forward, I&apos;m thrilled about the endless opportunities
+            in the tech world. My goal is to continue contributing to innovative
+            projects, bridging the gap between academia and industry, and making
+            a meaningful impact through technology. Beyond the code, I enjoy
+            [mention your hobbies or interests], which help me maintain a
+            well-rounded and balanced approach to life.
+          </p>
+        </div>
         <Button onClick={() => setShowMore(!showMore)}>
           {showMore ? "Less" : "More"}
         </Button>
       </div>
       <Separator />
-      <div className="flex items-center justify-center flex-wrap gap-16 max-w-7xl">
+      <div className="flex items-center justify-center flex-wrap gap-16 max-w-7xl mx-10 md:mx-0">
         <AboutCard
           Logo={FaCode}
           name="Development"
@@ -77,7 +80,6 @@ export default function About() {
           description="I provide ongoing website maintenance services, including security updates, performance optimization, and effective communication with clients to keep their digital assets running smoothly."
         />
       </div>
-      <Separator />
     </section>
   );
 }

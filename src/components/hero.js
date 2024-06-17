@@ -23,15 +23,15 @@ import Separator from "./common/separator.js";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center flex-col h-[calc(100vh-52px)] relative">
+    <section className="flex items-center justify-center flex-col h-[calc(100vh-64px)] relative">
       {/* <Snowfall
         images={images}
         radius={[30, 50]}
         speed={[0.5, 1]}
         snowflakeCount={10}
       /> */}
-      <p className="text-2xl">My name is Vishal</p>
-      <p className="uppercase text-6xl">I&apos;m a developer</p>
+      <p className="md:text-2xl">My name is Vishal</p>
+      <p className="uppercase text-3xl md:text-6xl text-center">I&apos;m a developer</p>
       <Separator />
       <div className="flex gap-8 mt-2">
         <Link href="https://github.com/Vishal3212890" target="_blank">

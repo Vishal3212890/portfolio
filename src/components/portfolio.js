@@ -38,7 +38,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="flex justify-center items-center flex-col gap-16 mt-16 max-w-7xl mx-auto px-5"
+      className="flex justify-center items-center flex-col gap-16 pt-28 max-w-7xl mx-auto px-5"
     >
       <SectionHeading label="Portfolio" />
       <div className="flex gap-5">
@@ -58,6 +58,7 @@ export default function Portfolio() {
                   <Link
                     key={index}
                     href={link.url}
+                    target="_blank"
                     className="border-b-2 border-black pb-1"
                   >
                     <span>{link.label}</span>

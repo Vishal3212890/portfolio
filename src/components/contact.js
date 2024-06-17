@@ -7,10 +7,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex justify-center items-center flex-col gap-16 py-16"
+      className="flex justify-center items-center flex-col gap-16 pt-28 pb-16 max-w-7xl mx-auto"
     >
       <SectionHeading label="Contact" />
-      <form className="flex justify-center items-center flex-col gap-10 w-1/3">
+      <form className="flex justify-center items-center flex-col gap-10 w-full px-10 md:w-1/2">
         <TextField name="name" placeholder="Enter your name*" />
         <TextField name="email" placeholder="Enter your email*" />
         <TextField name="phone" placeholder="Phone number" />

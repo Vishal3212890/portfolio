@@ -5,3 +5,33 @@
 html {
   scroll-behavior: smooth;
 }
+
+.button {
+  position: relative;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  transition: width 150ms ease-out;
+}
+
+.button::before {
+  top: 0;
+  left: 0;
+}
+
+.button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+}
