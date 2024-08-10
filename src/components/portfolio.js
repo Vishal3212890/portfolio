@@ -1,22 +1,15 @@
 import Image from "next/image.js";
 import SectionHeading from "./common/section-heading.js";
-import Button from "./common/button.js";
 import Link from "next/link.js";
 import ArrowUpRight from "./icons/arrow-up-right.js";
 
 export default function Portfolio() {
-  const images = [
-    "/images/carousel/carousel-1.jpg",
-    "/images/carousel/carousel-2.jpg",
-    "/images/carousel/carousel-3.jpg",
-  ];
-
   const projects = [
     {
       name: "Success.ai",
       description:
         "It is an AI-powered platform designed to help businesses with cold email outreach. It focuses on improving deliverability and response rates through features like account warmup and campaign management.",
-      image: "/images/carousel/carousel-1.jpg",
+      image: "/images/success-ai.png",
       links: [{ label: "View", url: "https://success.ai" }],
     },
     {
