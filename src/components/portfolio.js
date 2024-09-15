@@ -10,38 +10,39 @@ export default function Portfolio() {
       description:
         "It is an AI-powered platform designed to help businesses with cold email outreach. It focuses on improving deliverability and response rates through features like account warmup and campaign management.",
       image: "/images/success-ai.png",
-      links: [{ label: "View", url: "https://success.ai" }],
+      links: [{ label: "View", url: "https://www.success.ai" }],
     },
     {
       name: "Mister Z",
       description:
         "MisterZ is an ICO platform designed to facilitate the listing of ERC20 token projects, enable user investments in various projects, and provide a platform for auditors to conduct audits and participate in project voting.",
-      image: "/images/carousel/carousel-2.jpg",
-      links: [{ label: "View", url: "https://wethio.misterz.com" }],
+      image: "/images/misterz.png",
+      links: [{ label: "View", url: "https://www.misterz.com" }],
     },
     {
       name: "Bluechain",
       description:
         "Bluechain redefines cryptocurrency trading with a scalable, secure platform that leverages OKX's APIs to enable instant trades, real-time price tracking, and security with support for 2FA and authenticators.",
-      image: "/images/carousel/carousel-3.jpg",
-      links: [{ label: "View", url: "https://wethio.misterz.com" }],
+      image: "/images/bluechain.png",
+      links: [{ label: "View", url: "https://dev.bluechain.trade" }],
     },
   ];
 
   return (
     <section
       id="portfolio"
-      className="flex justify-center items-center flex-col gap-16 pt-28 max-w-7xl mx-auto px-5"
+      className="flex justify-center items-center flex-col gap-16 pt-28 max-w-7xl mx-auto px-8"
     >
       <SectionHeading label="Portfolio" />
-      <div className="flex gap-5">
+      <div className="flex flex-col items-center gap-5 xl:flex-row">
         {projects.map((project, index) => (
-          <div key={index} className="w-1/3 border-4 border-black">
+          <div key={index} className="md:w-1/2 xl:w-1/3 border-4 border-black">
             <Image
               src={project.image}
               alt={project.name}
-              width={700}
-              height={300}
+              width={500}
+              height={400}
+              className="w-full"
             />
             <div className="p-2 flex flex-col gap-2">
               <h2 className="font-bold">{project.name}</h2>
