@@ -9,7 +9,7 @@ export default function Skills() {
       className="flex items-center justify-center flex-col pt-28 gap-20 max-w-3xl mx-auto"
     >
       <SectionHeading label="Skills" />
-      <div className="flex flex-wrap items-center justify-center gap-20">
+      <div className="px-2 grid grid-cols-3 gap-10 md:grid-cols-4 md:gap-20">
         <Skill src="/images/html5.svg" title="HTML5" />
         <Skill src="/images/css3.svg" title="CSS3" />
         <Skill src="/images/js.svg" title="Javascript" />

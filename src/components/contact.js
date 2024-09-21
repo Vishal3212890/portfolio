@@ -3,6 +3,7 @@ import Button from "./common/button.js";
 import SectionHeading from "./common/section-heading.js";
 import TextArea from "./common/text-area.js";
 import TextField from "./common/text-field.js";
+import Spinner from "./common/spinner.js";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,23 +12,34 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     const data = { ...formData, [event.target.name]: event.target.value };
     setFormData(data);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    fetch("/api/contact", { method: "POST", body: JSON.stringify(formData) });
+    try {
+      setIsSubmitting(true);
 
-    // setFormData({
-    //   name: "",
-    //   email: "",
-    //   phone: "",
-    //   message: "",
-    // });
+      await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,6 +50,7 @@ export default function Contact() {
       <SectionHeading label="Contact" />
       <form
         className="flex justify-center items-center flex-col gap-10 w-full px-10 md:w-1/2"
+        method="post"
         onSubmit={handleSubmit}
       >
         <TextField
@@ -69,7 +82,9 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? <Spinner /> : "Submit"}
+        </Button>
       </form>
     </section>
   );
