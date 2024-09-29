@@ -49,7 +49,7 @@ export default function Contact() {
     >
       <SectionHeading label="Contact" />
       <form
-        className="flex justify-center items-center flex-col gap-10 w-full px-10 md:w-1/2"
+        className="flex justify-center items-center flex-col gap-10 w-full px-8 md:w-1/2"
         method="post"
         onSubmit={handleSubmit}
       >

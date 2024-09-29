@@ -1,7 +1,7 @@
 import Image from "next/image.js";
 import SectionHeading from "./common/section-heading.js";
 import Link from "next/link.js";
-import ArrowUpRight from "./icons/arrow-up-right.js";
+import { BsArrowUpRight } from "react-icons/bs";
 
 export default function Portfolio() {
   const projects = [
@@ -56,7 +56,7 @@ export default function Portfolio() {
                     className="border-b-2 border-black pb-1"
                   >
                     <span>{link.label}</span>
-                    <ArrowUpRight size={20} />
+                    <BsArrowUpRight className="inline" />
                   </Link>
                 ))}
               </div>

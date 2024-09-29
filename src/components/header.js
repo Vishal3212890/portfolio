@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-black text-white w-full px-8 py-3 flex justify-between items-center fixed top-0 right-0 z-10">
+      <header className="bg-black text-white w-full px-5 py-3 flex justify-between items-center fixed top-0 right-0 z-10">
         <div>
           <Image src="/images/logo.png" width={30} height={30} />
         </div>
