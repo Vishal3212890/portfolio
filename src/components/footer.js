@@ -13,12 +13,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white flex items-center justify-center flex-col py-10 gap-10">
+    <footer className="bg-black text-white flex items-center justify-center flex-col py-10 gap-8">
       <button
         className="group uppercase flex items-center justify-center flex-col gap-2 text-lg tracking-widest font-bold"
         onClick={handleBackToTopClick}
       >
-        <MdDoubleArrow color="white" size={25} className="-rotate-90 bottom-0 duration-200 group-hover:-translate-y-1" />
+        <MdDoubleArrow
+          color="white"
+          size={25}
+          className="-rotate-90 bottom-0 duration-200 group-hover:-translate-y-1"
+        />
         Back to top
       </button>
       <div className="flex gap-5">
@@ -28,8 +32,8 @@ export default function Footer() {
         <AiOutlineMail size={36} />
       </div>
       <p>
-        <span className="font-bold text-xl">@2023 Vishal Prajapati</span> All
-        Rights Reserved.
+        <span className="font-bold">@2023 Vishal Prajapati</span>&nbsp;
+        <span className="text-sm">All Rights Reserved.</span>
       </p>
     </footer>
   );

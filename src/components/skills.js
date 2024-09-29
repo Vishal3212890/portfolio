@@ -1,15 +1,14 @@
 import SectionHeading from './common/section-heading.js';
-import Separator from './common/separator.js';
 import Skill from './common/skill.js';
 
 export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex items-center justify-center flex-col pt-28 px-5 gap-20 max-w-3xl mx-auto"
+      className="flex items-center justify-center flex-col pt-28 gap-20 max-w-3xl mx-auto"
     >
       <SectionHeading label="Skills" />
-      <div className="grid grid-cols-3 gap-10 md:grid-cols-4 md:gap-20">
+      <div className="grid grid-cols-3 gap-10 md:grid-cols-4 px-5 md:gap-20">
         <Skill src="/images/html5.svg" title="HTML5" />
         <Skill src="/images/css3.svg" title="CSS3" />
         <Skill src="/images/js.svg" title="Javascript" />

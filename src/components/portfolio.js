@@ -31,18 +31,18 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="flex justify-center items-center flex-col gap-16 pt-28 max-w-7xl mx-auto px-8"
+      className="flex justify-center items-center flex-col gap-16 pt-28 max-w-7xl mx-auto"
     >
       <SectionHeading label="Portfolio" />
-      <div className="flex flex-col items-center gap-5 xl:flex-row">
+      <div className="flex flex-col items-center gap-5 px-5 xl:flex-row">
         {projects.map((project, index) => (
           <div key={index} className="md:w-1/2 xl:w-1/3 border-4 border-black">
             <Image
               src={project.image}
               alt={project.name}
               width={500}
-              height={400}
-              className="w-full"
+              height={250}
+              className="w-full h-[250px] object-cover"
             />
             <div className="p-2 flex flex-col gap-2">
               <h2 className="font-bold">{project.name}</h2>
