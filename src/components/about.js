@@ -53,9 +53,7 @@ export default function About() {
             As I move forward, I&apos;m thrilled about the endless opportunities
             in the tech world. My goal is to continue contributing to innovative
             projects, bridging the gap between academia and industry, and making
-            a meaningful impact through technology. Beyond the code, I enjoy
-            [mention your hobbies or interests], which help me maintain a
-            well-rounded and balanced approach to life.
+            a meaningful impact through technology.
           </p>
         </div>
         <Button onClick={() => setShowMore(!showMore)}>
