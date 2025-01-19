@@ -31,25 +31,29 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-black text-white w-full px-5 py-3 flex justify-between items-center fixed top-0 right-0 z-10">
-        <div>
-          <Image src="/images/logo.png" width={30} height={30} />
-        </div>
-        <div>
-          <div className="hidden sm:flex gap-5 items-center">{links}</div>
-          <div className="sm:hidden" onClick={() => setIsOpen(true)}>
-            <CiMenuBurger color="white" />
+      <header className="bg-black text-white fixed top-0 right-0 z-10 w-full py-3">
+        <div className="px-8 flex justify-between items-center max-w-[1440px] m-auto">
+          <div>
+            <Image src="/images/logo.png" width={30} height={30} />
           </div>
-          <div
-            className={classNames(
-              "sm:hidden bg-black h-full fixed top-0 right-0 z-20 duration-300 px-8 pt-5",
-              isOpen ? "translate-x-0" : "translate-x-full"
-            )}
-          >
-            <div className="flex justify-end">
-              <RxCross1 color="white" onClick={() => setIsOpen(false)} />
+          <div>
+            <div className="hidden sm:flex gap-5 items-center">{links}</div>
+            <div className="sm:hidden" onClick={() => setIsOpen(true)}>
+              <CiMenuBurger color="white" />
             </div>
-            <div className="flex flex-col items-center gap-5 mt-5">{links}</div>
+            <div
+              className={classNames(
+                "sm:hidden bg-black h-full fixed top-0 right-0 z-20 duration-300 px-8 pt-5",
+                isOpen ? "translate-x-0" : "translate-x-full"
+              )}
+            >
+              <div className="flex justify-end">
+                <RxCross1 color="white" onClick={() => setIsOpen(false)} />
+              </div>
+              <div className="flex flex-col items-center gap-5 mt-5">
+                {links}
+              </div>
+            </div>
           </div>
         </div>
       </header>
