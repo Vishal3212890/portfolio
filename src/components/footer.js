@@ -6,6 +6,7 @@ import {
   AiOutlineInstagram,
   AiOutlineMail,
 } from "react-icons/ai";
+import Link from "next/link.js";
 
 export default function Footer() {
   const handleBackToTopClick = () => {
@@ -26,10 +27,24 @@ export default function Footer() {
         Back to top
       </button>
       <div className="flex gap-5">
-        <AiOutlineLinkedin size={36} />
-        <AiOutlineGithub size={36} />
-        <AiOutlineInstagram size={36} />
-        <AiOutlineMail size={36} />
+        <Link
+          href="https://www.linkedin.com/in/vishal-prajapati-257197204"
+          target="_blank"
+        >
+          <AiOutlineLinkedin size={36} />
+        </Link>
+        <Link href="https://github.com/Vishal3212890" target="_blank">
+          <AiOutlineGithub size={36} />
+        </Link>
+        <Link
+          href="https://www.instagram.com/vishal.prajapati_/"
+          target="_blank"
+        >
+          <AiOutlineInstagram size={36} />
+        </Link>
+        <Link href="mailto:vishalp3212890@gmail.com">
+          <AiOutlineMail size={36} />
+        </Link>
       </div>
       <p>
         <span className="font-bold">@2023 Vishal Prajapati</span>&nbsp;
